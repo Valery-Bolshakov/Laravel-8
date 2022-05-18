@@ -15,16 +15,13 @@ use Illuminate\Support\Facades\Cache;
 // Все фасады Laravel определены в этом пространстве имён
 //use Illuminate\Support\Facades\Route;  // Все фасады Laravel определены в этом пространстве имён
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+/** Cloud-Laundry */
+
+//Route::get('/cloud-laundry/frame-1', [UserController::class, 'show']);
+Route::get('/cloud-laundry/main-page-desktop', [UserController::class, 'show'])/*->name('home')*/;
+
+/*Route::get('/', 'HomeController@index')->name('home');
+Route::get('/page/about', 'PageController@show')->name('page.about');*/
 
 /** Маршрутизация */
 
@@ -32,11 +29,6 @@ use Illuminate\Support\Facades\Cache;
 Route::get('/', function () {
     return view('welcome');
 });
-
-/** Cloud-Laundry */
-
-Route::get('/cloud-laundry/frame-1', [UserController::class, 'show']);
-//Route::get('/cloud-laundry/main-page-desktop', [UserController::class, 'show']);
 
 /** Простой маршрут до контроллера и метода */
 /* Создали маршрут http://laraver-8/user на контроллер и соотв метод index */

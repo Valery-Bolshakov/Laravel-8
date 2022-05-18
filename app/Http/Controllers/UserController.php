@@ -17,8 +17,8 @@ class UserController extends Controller
      */
     public function show()
     {
-        return view('cloud-laundry.frame_1');
-//        return view('cloud-laundry.main-page-desktop');
+//        return view('cloud-laundry.frame_1');
+        return view('cloud-laundry.main-page-desktop');
     }
 
 
